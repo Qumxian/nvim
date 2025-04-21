@@ -1,0 +1,19 @@
+{
+    "extensions.updateCheck": "daily",
+    "suggest.noselect": true,
+    "suggest.enablePreselect": false,
+    "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/19.1.2/clangd_19.1.2/bin/clangd",
+    "languageserver" : {
+            "svlangserver": {
+                "command": "svlangserver",
+                "filetypes": ["systemverilog", "verilog"],
+                "settings": {
+                    "systemverilog.includeIndexing": ["**/*.{v,vh,sv,svh}"],
+                    "systemverilog.excludeIndexing": ["test/**/*.sv*"],
+                    "systemverilog.defines" : [],
+                    "systemverilog.launchConfiguration": "/tools/verilator -v -sv -Wall --lint-only",
+                    "systemverilog.formatCommand": "/tools/verible-verilog-format"
+                }
+            }
+    }
+}
