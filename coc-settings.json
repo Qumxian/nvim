@@ -2,11 +2,13 @@
     "extensions.updateCheck": "daily",
     "suggest.noselect": true,
     "suggest.enablePreselect": false,
-    "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/19.1.2/clangd_19.1.2/bin/clangd",
+    "clangd.path": "/home/qumx/.config/coc/extensions/coc-clangd-data/install/19.1.2/clangd_19.1.2/bin/clangd",
+    "clangd.arguments": ["--query-driver", "/usr/bin/gcc"],
+    "Lua.diagnostics.globals": ["vim"],
     "languageserver" : {
             "svlangserver": {
                 "command": "svlangserver",
-                "filetypes": ["systemverilog", "verilog"],
+                "filetypes": ["systemverilog", "verilog", "v"],
                 "settings": {
                     "systemverilog.includeIndexing": ["**/*.{v,vh,sv,svh}"],
                     "systemverilog.excludeIndexing": ["test/**/*.sv*"],

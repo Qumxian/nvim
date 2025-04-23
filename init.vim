@@ -1,4 +1,4 @@
-" =================== bascal config ===================
+" |=================== bascal config ===================|
 let &t_ut=''
 set encoding=utf-8
 set autochdir
@@ -33,19 +33,13 @@ set ignorecase
 set inccommand=split
 set completeopt=longest,noinsert,menuone,noselect,preview
 
-
-autocmd BufRead,BufNewFile *.v set filetype=verilog
-
 " No annoying sound on errors
 set noerrorbells
 set novisualbell
 set t_vb=
 set tm=500
 
-" =================== key mapping ===================
-let g:mapleader = ' ' " <LEADER>=space
-
-" =================== plugins ===================
+" |=================== plugins ===================|
 call plug#begin()
 
 " AUTOCOMPLETE
@@ -53,22 +47,57 @@ call plug#begin()
 Plug 'neoclide/coc.nvim', {'branch': 'release'} 
 
 " ===== SCHEME =====
-Plug 'rebelot/kanagawa.nvim', { 'as' : 'kanagawa' }
-Plug 'catppuccin/nvim', { 'as' : 'catppuccin' }
+" Plug 'folke/tokyonight.nvim', { 'as' : 'tokyonight' }
+" Plug 'rebelot/kanagawa.nvim', { 'as' : 'kanagawa' }
+" Plug 'catppuccin/nvim', { 'as' : 'catppuccin' }
 Plug 'lewis6991/gitsigns.nvim', { 'as' : 'gitsigns' }
+Plug 'nvim-tree/nvim-tree.lua', { 'as' : 'nvim-tree'}
+Plug 'nvim-lualine/lualine.nvim'
+Plug 'nvim-tree/nvim-web-devicons'
 
 " ===== HIGHLIGHT =====
 Plug 'RRethy/vim-illuminate', { 'as' : 'vim-illuminate'}
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'norcalli/nvim-colorizer.lua'
+
+" ===== TOOLS =====
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.8' }
 
 call plug#end()
 
-" plugins configuration
-" ======================== coc.nvim ========================
-source $HOME/.config/nvim/vimrc.d/plugins/coc_nvim.vim
+" ========== scheme ==========
+" lua require("plugins.catppuccin")
 
-" ==================nvim-treesitter.lua ===================
+" plugins configuration
+" ========== coc.nvim ==========
+source $XDG_CONFIG_HOME/nvim/vimrc.d/plugins/coc_nvim.vim
+
+" ========== nvim-treesitter.lua ==========
 lua require("plugins.nvim-treesitter")
 
-" ==================== scheme ====================
-silent colorscheme kanagawa-dragon
+" ========== vim-illuminate ==========
+lua require("plugins.illuminate")
+
+" ========== gitsigns ==========
+lua require("plugins.gitsigns")
+
+" ========== kanagawa ==========
+" lua require("plugins.kanagawa")
+
+" ========== lualine ==========
+lua require("plugins.lualine")
+
+" ========== colorizer ==========
+
+" ========== nvim-tree ==========
+lua require("plugins.nvim-tree")
+
+
+" |=================== key mapping ===================|
+let g:mapleader = ' ' " <LEADER>=space
+
+source $XDG_CONFIG_HOME/nvim/vimrc.d/keymap/nvimtree.vim
+
+source $XDG_CONFIG_HOME/nvim/vimrc.d/keymap/telescope.vim
+
