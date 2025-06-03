@@ -2,7 +2,6 @@ let g:coc_global_extensions = [
     \'coc-marketplace',
     \'coc-actions',
     \'coc-explorer',
-    \'coc-clangd',
     \'coc-python',
     \'coc-json',
     \'coc-lua',

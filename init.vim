@@ -8,7 +8,7 @@ set updatetime=100
 set shortmess+=c
 set signcolumn=yes
 set cursorline
-set expandtab
+" set expandtab
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
