@@ -1,5 +1,4 @@
 vim.lsp.config("*", {
-  root_marks = { ".git" },
   capabilities = vim.lsp.protocol.make_client_capabilities()
 })
 

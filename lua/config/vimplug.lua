@@ -6,9 +6,9 @@ vim.call('plug#begin')
 -- AUTOCOMPLETE
 -- ===== lsp =====
 --Plug ('neoclide/coc.nvim', { ['branch'] = 'release'})
-Plug ('hrsh7th/nvim-cmp')
 Plug ('neovim/nvim-lspconfig')
 Plug ('mason-org/mason.nvim')
+Plug ('hrsh7th/nvim-cmp')
 Plug ('hrsh7th/cmp-nvim-lsp')
 Plug ('hrsh7th/cmp-buffer')
 Plug ('hrsh7th/cmp-path')
@@ -30,9 +30,7 @@ Plug ('ellisonleao/gruvbox.nvim')
 
 -- ===== HIGHLIGHT =====
 Plug ('RRethy/vim-illuminate', { ['as'] = 'vim-illuminate'})
-Plug ('nvim-treesitter/nvim-treesitter', { ['do'] = function()
-	vim.run[':TSUpdate']()
-end })
+Plug ('nvim-treesitter/nvim-treesitter', { ['do'] = ':TSUpdate' })
 Plug ('norcalli/nvim-colorizer.lua')
 Plug ('nvim-lua/plenary.nvim')
 Plug ('nvim-telescope/telescope.nvim')

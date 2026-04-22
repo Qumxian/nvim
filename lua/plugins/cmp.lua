@@ -56,6 +56,12 @@ cmp.setup.cmdline(':', {
   }, {
     { name = 'cmdline' }
   }),
+  view = {
+    entries = {
+      name = 'wildmenu',
+      separator = ' | ',
+    }
+  },
   matching = { disallow_symbol_nonprefix_matching = false }
 })
 
