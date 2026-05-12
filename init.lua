@@ -31,13 +31,14 @@ vim.opt.completeopt = { "longest", "noinsert", "menuone", "noselect", "preview" 
 vim.opt.clipboard:append("unnamedplus")
 vim.opt.cmdheight = 1
 
---  vim.opt.expandtab
-vim.opt.cindent = true
+-- default setting
+vim.opt.expandtab = true
+vim.opt.cindent = false
 vim.opt.smartindent = true
 vim.opt.autoindent = true
-vim.opt.tabstop = 8
-vim.opt.shiftwidth = 8
-vim.opt.softtabstop = 8
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.softtabstop = 4
 vim.opt.smarttab = true
 vim.opt.cino:append("L0")
 
@@ -49,7 +50,7 @@ vim.opt.errorbells = false
 vim.opt.visualbell = false
 vim.opt.tm = 500
 
---  |=================== plugin manager ===================|
+-- |=================== plugin manager ===================|
 require("config.vimplug")
 require("plugins")
 

@@ -7,7 +7,8 @@ local servers = {
   "clangd",
   "lua_ls",
   "vimls",
-  "pyright"
+  "pyright",
+  "rust_analyzer"
 }
 
 require("mason").setup()
